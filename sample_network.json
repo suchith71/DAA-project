@@ -1,0 +1,25 @@
+{
+  "network_name": "NetOptima Sample Network",
+  "currency_unit": "INR_thousands",
+  "nodes": [
+    {"id": "A", "name": "Central Data Centre", "role": "server"},
+    {"id": "B", "name": "North Hub", "role": "regional"},
+    {"id": "C", "name": "South Hub", "role": "regional"},
+    {"id": "D", "name": "East Gateway", "role": "iot"},
+    {"id": "E", "name": "West Gateway", "role": "iot"},
+    {"id": "F", "name": "Backup Centre", "role": "backup"}
+  ],
+  "edges": [
+    {"source": "A", "target": "B", "cost": 4},
+    {"source": "A", "target": "C", "cost": 3},
+    {"source": "A", "target": "D", "cost": 7},
+    {"source": "B", "target": "C", "cost": 2},
+    {"source": "B", "target": "E", "cost": 5},
+    {"source": "C", "target": "D", "cost": 4},
+    {"source": "C", "target": "E", "cost": 6},
+    {"source": "D", "target": "E", "cost": 1},
+    {"source": "D", "target": "F", "cost": 5},
+    {"source": "E", "target": "F", "cost": 2},
+    {"source": "B", "target": "F", "cost": 8}
+  ]
+}
